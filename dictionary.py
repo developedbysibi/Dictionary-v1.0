@@ -4,16 +4,51 @@
 import requests
 import json
 
-word = input('Enter Word to Search :')
-url = "https://mashape-community-urban-dictionary.p.rapidapi.com/define"
-querystring = {"term":word}
-headers = {
-    'x-rapidapi-host': "mashape-community-urban-dictionary.p.rapidapi.com",
-    'x-rapidapi-key': "df712ca9cdmshfa95e98cd61e2c3p1a78e0jsn77fb10c09bd0"
-    }
-response = requests.get( url, headers=headers, params=querystring)
-data = response.json()
-for _ in range(0,1):
-    for item in data['list']:
-        print(('Meaning:').upper() + item['definition'] + '\n' +  ('Example:').upper() + item['example'])
-        print('\n')
+
+print('''
+
+====================================================================================================
+====================================================================================================
+====================================================================================================
+
+ ______                ______ _      _   _                                          __        _____
+|___  /                |  _  (_)    | | (_)                                        /  |      |  _  |
+   / /  ___ _ __ ___   | | | |_  ___| |_ _  ___  _ __   __ _ _ __ _   _    __   __ `| |      | |/' |
+  / /  / _ \ '__/ _ \  | | | | |/ __| __| |/ _ \| '_ \ / _` | '__| | | |   \ \ / /  | |      |  /| |
+./ /__|  __/ | | (_) | | |/ /| | (__| |_| | (_) | | | | (_| | |  | |_| |    \ V /  _| |_  _  \ |_/ /
+\_____/\___|_|  \___/  |___/ |_|\___|\__|_|\___/|_| |_|\__,_|_|   \__, |     \_/   \___/ (_)  \___/
+                                                                   __/ |
+                                                                  |___/
+
+                                                                           Developed by ZeroCoder000
+====================================================================================================
+====================================================================================================
+====================================================================================================
+
+      ''')
+run = True
+while (run):
+    print('========================================')
+    print('1: Search a word.'+'\n'+'2: Quit')
+    user_input = int(input('Enter your choice : '))
+    print('========================================')
+
+    if user_input == 1:
+        word = input('Enter Word to Search :')
+        print('Searching...')
+        url = "https://aplet123-wordnet-search-v1.p.rapidapi.com/master"
+        querystring = {"word":word}
+        headers = {
+            'x-rapidapi-host': "aplet123-wordnet-search-v1.p.rapidapi.com",
+            'x-rapidapi-key': "df712ca9cdmshfa95e98cd61e2c3p1a78e0jsn77fb10c09bd0"
+            }
+        response = requests.get( url, headers=headers, params=querystring)
+        data = response.json()
+        print('------------------------------------------------------------------------------------------')
+        print(('Meaning:').upper() + data['definition'])
+        print('------------------------------------------------------------------------------------------')
+
+    else:
+        print('THANKYOU FOR USING ZERO DICTIONARY v1.0!')
+        print('========================================')
+        exit()
