@@ -1,8 +1,8 @@
-# crazy-dictionary-v1.0
+# Zero-dictionary-v1.0
+# Developed by ZeroCoder000
+This a Simple dictionary app
 
-This a crazy dictionary app
-
-Type in a word to search and it will return a funny meaning about that word!
+Type in a word to search and it will return meaning about that word!
 
 Run the 'dictionary.py' file.
 
