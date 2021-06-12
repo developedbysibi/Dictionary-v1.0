@@ -1,5 +1,5 @@
-#crazy-dictionary-v1.0
-#developer : ZeroCoder000
+#Dictionary-v1.0
+#developer : sibisaravanan
 
 import requests
 import json
